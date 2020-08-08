@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/dp10"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/dp10"
+        >
+
+        <ImageView
+            android:id="@+id/cancel_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:padding="@dimen/dp10"
+            android:layout_gravity="right"
+            android:layout_alignParentLeft="true"></ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/mob_otp"
+            android:layout_gravity="center"></ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Verify Your Mobile Number"
+            android:padding="@dimen/dp10"
+            android:textColor="@color/white"
+            android:fontFamily="@font/tajawal_bold"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dp14"></TextView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/dp20"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We have send you OTP on your mobile and email"
+            android:padding="@dimen/dp10"
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dp12"></TextView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/buttonlinear"
+
+            >
+
+            <ImageView
+                android:id="@+id/left_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/two"
+                android:padding="@dimen/dp10"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"></ImageView>
+
+            <EditText
+                android:id="@+id/edittext_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/textCol"
+                android:layout_gravity="center"
+                android:hint="OTP"
+                android:textSize="@dimen/dp18"
+                android:layout_toRightOf="@+id/left_image"
+                android:background="@drawable/buttonlinear"
+                android:inputType="number"
+                android:fontFamily="@font/tajawal_regular"
+                android:cursorVisible="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="left|center"
+                android:layout_centerInParent="true"
+                android:maxLength="6"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:id="@+id/resendOtptimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="@dimen/dp20"
+                android:fontFamily="@font/tajawal_bold"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+
+
+            <TextView
+            android:id="@+id/resendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Resend OTP"
+            android:fontFamily="@font/proximanovabold"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp20"
+
+            android:layout_gravity="right"
+            android:gravity="right"/>
+        </LinearLayout>
+
+        <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="VERIFY"
+    android:textSize="@dimen/dp14"
+    android:fontFamily="@font/tajawal_bold"
+    android:background="@color/colorPrimaryDark"
+    android:textColor="@color/white"
+    android:layout_marginTop="@dimen/dp30"
+    android:layout_marginLeft="@dimen/dp30"
+    android:layout_marginRight="@dimen/dp30"
+    android:id="@+id/verify"
+    ></Button>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+  >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_bg"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="@dimen/dp24"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp24"
+                android:onClick="imagearrow"
+                android:visibility="visible"
+                android:src="@drawable/ic_arrow_left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_detail"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Add Patient"
+                android:textSize="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/image_backarrow"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp20">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Patient"
+        android:textSize="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        android:visibility="gone"
+        ></TextView>
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Name *:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:hint="Enter Patient Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_pname"
+            android:fontFamily="@font/tajawal_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Species *:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/species_auto"
+        android:hint="Select Species"
+
+
+        ></AutoCompleteTextView>
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/species_list"
+        android:hint="Select Species"
+        android:visibility="gone"
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Breed *:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/breed_auto"
+        android:hint="Select Breed"
+        ></AutoCompleteTextView>
+
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/breed_list"
+        android:hint="Select Breed"
+        android:visibility="gone"
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Color *:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_auto"
+        android:hint="Select Color"
+
+
+        ></AutoCompleteTextView>
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_list"
+        android:hint="Select Color"
+
+        android:visibility="gone"
+
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Sex *:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sex_list"
+        android:hint="Select Sex"
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Neutered :"
+            android:textSize="@dimen/dp16"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp20"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/tajawal_bold"
+            ></TextView>
+
+
+        <CheckBox
+            android:id="@+id/cb_Desexed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></CheckBox>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Weight :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:hint="Enter Patient Weight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/ed_pweight"
+            android:fontFamily="@font/tajawal_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient date of birth :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:hint="Enter DOB">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eddobsignup"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Microchip :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:hint="Enter Microchip">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/ed_pmicrochip"
+            android:fontFamily="@font/tajawal_regular"
+            android:maxLength="15" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add pet photo :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"></TextView>
+
+
+    <ImageView
+        android:layout_width="@dimen/dp120"
+        android:src="@android:drawable/ic_menu_add"
+        android:onClick="petimage"
+        android:id="@+id/ed_photographschoolcamera"
+        android:layout_height="@dimen/dp100"
+        android:tint="@color/colorPrimaryDark"
+        android:layout_gravity="center"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:id="@+id/add"
+        android:onClick="addbtn"></Button>
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

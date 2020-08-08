@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/coordinator">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_bg"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="@dimen/dp24"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp24"
+                android:onClick="imagearrow"
+                android:visibility="visible"
+                android:src="@drawable/ic_arrow_left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_detail"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Choose Booking TIme"
+                android:textSize="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/image_backarrow"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical"
+
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/btn_book"
+        android:padding="@dimen/dp10">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/top_layer"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp20"
+            android:id="@+id/address"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/tajawal_bold"
+            ></TextView>
+
+            <Button
+                android:id="@+id/btn_change"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:text="CHANGE"
+                android:textColor="@color/colorPrimaryDark"
+                android:onClick="changeaddress"
+                android:background="@drawable/customborder"></Button>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+        <TextView
+            android:id="@+id/txt_colony"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Colony:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+        <TextView
+            android:id="@+id/txt_landmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Landmark:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+        <TextView
+            android:id="@+id/txt_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+        <TextView
+            android:id="@+id/txt_postcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postcode:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/txt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile:"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+            android:maxLength="10"
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1.2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="At what time should the professional arrive?"
+            android:layout_below="@+id/toolbar"
+            android:textSize="@dimen/dp14"
+            android:padding="@dimen/dp10"
+            android:textColor="@color/textCol"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_viewdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp4"
+            android:background="@color/white"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_viewtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scrl"
+            android:padding="@dimen/dp4"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@color/white"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOOK SERVICE"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/toolbar_bg"
+        android:padding="@dimen/dp10"
+        android:onClick="book"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/tajawal_bold"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

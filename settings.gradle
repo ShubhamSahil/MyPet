@@ -1,0 +1,2 @@
+include ':app', ':oppwa.mobile-2.49.0', ':alipaySdk-15.5.9'
+rootProject.name='MyPet'

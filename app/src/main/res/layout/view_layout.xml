@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pet.web.ViewActivity"
+    android:id="@+id/zoom_linear_layout"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bg"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="visible"
+            >
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="@dimen/dp30"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp30"
+
+                android:onClick="back"
+                android:visibility="visible"
+                android:src="@drawable/ic_arrow_left"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_detail"
+                android:fontFamily="@font/tajawal_bold"
+                android:text=""
+                android:textSize="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/image_backarrow"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView"
+            android:orientation="vertical"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/adViewContainer"
+        android:layout_alignParentBottom="true"
+        >
+
+    </RelativeLayout>
+</LinearLayout>

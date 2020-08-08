@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/row">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clinic:"
+        android:textSize="@dimen/dp16"
+
+android:id="@+id/name"
+        android:textColor="@color/textColblack"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="top"
+        android:layout_marginTop="@dimen/dp6"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clinic:"
+            android:textSize="@dimen/dp16"
+
+            android:id="@+id/sub_name"
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="left"
+            android:layout_toLeftOf="@+id/view_horizontal"
+            android:layout_marginRight="@dimen/dp10"
+            ></TextView>
+
+        <View
+            android:layout_width="1dp"
+            android:id="@+id/view_horizontal"
+            android:layout_height="@dimen/dp80"
+            android:layout_marginLeft="@dimen/dp20"
+            android:alpha="0.2"
+            android:background="#707070"
+            android:layout_toLeftOf="@+id/right"
+            android:layout_marginRight="@dimen/dp10"
+
+            ></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:id="@+id/right"
+            android:padding="@dimen/dp10"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="@dimen/dp40"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:src="@drawable/marker"
+                android:scaleType="centerCrop"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Clinic:"
+                android:textSize="@dimen/dp16"
+
+                android:id="@+id/distance"
+                android:layout_centerVertical="true"
+
+                android:textColor="@color/textColblack"
+                android:fontFamily="@font/tajawal_regular"
+                ></TextView>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call"
+            android:textSize="@dimen/dp14"
+            android:padding="@dimen/dp10"
+
+
+            android:onClick="addcall"
+            android:id="@+id/add_call"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/tajawal_regular"
+            android:layout_alignParentLeft="true"
+            android:background="#567845"
+            android:textAllCaps="false"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Appointment"
+            android:textSize="@dimen/dp14"
+            android:padding="@dimen/dp10"
+
+            android:onClick="addapointment"
+            android:id="@+id/add_appointment"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="@font/tajawal_regular"
+         android:layout_toRightOf="@+id/add_call"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textAllCaps="false"></Button>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.2"
+        android:background="#707070"
+        android:layout_marginTop="@dimen/dp10"
+
+        android:id="@+id/view"></View>
+
+
+</LinearLayout>

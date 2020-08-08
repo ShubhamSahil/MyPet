@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+   >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_bg"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="@dimen/dp24"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp24"
+                android:onClick="imagearrow"
+                android:visibility="visible"
+                android:src="@drawable/ic_arrow_left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_detail"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Add Appointment"
+                android:textSize="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/image_backarrow"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp20">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Appointment"
+        android:textSize="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clinic :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:visibility="gone"
+
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clinic_list"
+        android:hint="Choose Clinic"
+        android:visibility="gone"
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Doctor*:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/doctor_list"
+        android:hint="Select Doctor"
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pet Name* :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pet_list"
+        android:hint="Select Pet"
+
+
+        ></com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile *:"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:hint="Mobile number (EX. 054XXXXXXX)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/ed_vmobile"
+            android:fontFamily="@font/tajawal_regular"
+            android:maxLength="10"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prefered Date* :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+
+        android:hint="Enter Appointment Date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edappointmentdate"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reason* :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:minHeight="@dimen/dp100"
+        android:hint="Enter Appointment reason in brief..." />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:hint="Enter Appointmnet reason in brief..."
+        android:visibility="gone"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_appointmentreason"
+            android:fontFamily="@font/tajawal_regular"
+            android:minHeight="@dimen/dp100"
+            android:visibility="gone"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add picture :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"></TextView>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add picture :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:onClick="addpicture"
+        android:id="@+id/add_picture"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"></Button>
+
+    <ImageView
+        android:layout_width="@dimen/dp120"
+        android:src="@drawable/pet_image"
+        android:id="@+id/ed_picturepet"
+        android:layout_height="@dimen/dp100"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:id="@+id/add"
+
+        android:onClick="addbtnappointment"></Button>
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

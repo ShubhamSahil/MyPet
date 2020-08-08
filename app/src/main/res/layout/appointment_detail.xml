@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="@dimen/dp24"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp24"
+                android:onClick="imagearrow"
+                android:visibility="visible"
+                android:src="@drawable/ic_arrow_left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_detail"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Appointment Details"
+                android:textSize="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/image_backarrow"
+                android:layout_toLeftOf="@id/edit"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DONE"
+                android:textSize="@dimen/dp16"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:visibility="gone"
+                android:id="@+id/edit"
+                android:textColor="@color/white"
+                android:fontFamily="@font/tajawal_bold"
+                android:layout_alignParentRight="true"
+                ></TextView>
+
+            <ImageView
+                android:id="@+id/image_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp60"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:onClick="deactivate"
+                android:src="@drawable/delete"
+                android:visibility="gone" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp10"
+>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Booked for :"
+        android:textSize="@dimen/dp16"
+        android:padding="@dimen/dp10"
+        android:textColor="@color/textColblack"
+        android:fontFamily="@font/tajawal_light"
+        ></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp10">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="@dimen/dp80"
+            android:layout_gravity="left"
+            android:id="@+id/appimage"
+            android:src="@drawable/pet_image"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.6"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_gravity="center"
+            android:layout_weight="1.6"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_apppname"
+            android:fontFamily="@font/tajawal_regular"
+            android:textColor="@color/textColblack"
+            android:background="@null"
+            android:gravity="left|center"
+            tools:text="SPecies"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_gravity="center"
+            android:layout_weight="1.6"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_apppreason"
+            android:fontFamily="@font/tajawal_regular"
+            android:textColor="@color/textColblack"
+            android:background="@null"
+            android:gravity="left|center"
+            tools:text="SPecies"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I need change pet for my appointment >"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:visibility="gone"
+        android:id="@+id/editpet"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <LinearLayout
+        android:id="@+id/eventslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.3"
+        android:background="#707070"
+        android:id="@+id/view"
+        android:layout_marginTop="@dimen/dp10"></View>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date and time :"
+        android:textSize="@dimen/dp16"
+        android:paddingTop="@dimen/dp20"
+        android:layout_weight="1"
+        android:textColor="@color/textColblack"
+        android:fontFamily="@font/tajawal_regular"
+        ></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="2"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/dp10"
+    >
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/ed_appdatetime"
+        android:layout_weight="1"
+        android:fontFamily="@font/tajawal_bold"
+        android:textColor="@color/textColblack"
+        android:background="@null"
+        android:gravity="left"
+        android:text="SPecies"
+        />
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="I need reschedule my appointment >"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:onClick="editdate"
+        android:id="@+id/editreschedule"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.3"
+        android:background="#707070"
+        android:layout_marginTop="@dimen/dp10"></View>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp10"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clinic detail"
+            android:textSize="@dimen/dp16"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:layout_weight="1"
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/appdcotorname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/tajawal_bold"
+            android:textColor="@color/textColblack"
+            android:textSize="@dimen/dp16"
+            android:layout_weight="1.5"
+            tools:text="Title"
+
+            />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:id="@+id/appclinicdetail"
+                android:fontFamily="@font/tajawal_regular"
+                android:textColor="@color/textColblack"
+                android:background="@null"
+                android:gravity="left"
+                tools:text="SPecies"/>
+        </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:alpha="0.3"
+        android:background="#707070"
+        ></View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:orientation="vertical"
+          >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitor contact"
+                android:textSize="@dimen/dp16"
+                android:paddingTop="@dimen/dp20"
+                android:layout_weight="1"
+                android:textColor="@color/textColblack"
+                android:fontFamily="@font/tajawal_regular"
+                ></TextView>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/appvisitorcontact"
+                android:fontFamily="@font/tajawal_regular"
+                android:textColor="@color/textColblack"
+                android:background="@null"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                tools:text="8766266839"/>
+
+
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/dp60"
+                android:layout_weight="0.2"
+                android:textColor="#707070"
+                android:text="|"></TextView>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textSize="@dimen/dp16"
+                    android:paddingTop="@dimen/dp20"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColblack"
+                    android:fontFamily="@font/tajawal_regular"
+                    ></TextView>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:id="@+id/ed_appamount"
+                    android:fontFamily="@font/tajawal_bold"
+                    android:textColor="@color/textColblack"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:paddingBottom="@dimen/dp10"
+                    android:enabled="false"
+                    tools:text="@string/menu_address"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I need change visitor contact detail >"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:onClick="changecontact"
+        android:id="@+id/editcontact"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.3"
+        android:background="#707070"
+        android:layout_marginTop="@dimen/dp10"></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visitor address"
+            android:textSize="@dimen/dp16"
+            android:paddingTop="@dimen/dp20"
+            android:layout_weight="1"
+            android:textColor="@color/textColblack"
+            android:fontFamily="@font/tajawal_regular"
+            ></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appvisitoraddress"
+            android:fontFamily="@font/tajawal_regular"
+            android:textColor="@color/textColblack"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/dp14"
+            tools:text="1234rtgjhkjlkjhgfdghjklkjhgfdxcvbnmkl,mghjbkljhgfhvjklhgfhjkhgfghjkhgfhjgjhhgyfghgfghhgfjhjh
+cvhvhhvjjjjj"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I need change address detail >"
+            android:textSize="@dimen/dp16"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:id="@+id/editaddress"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/tajawal_bold"
+            android:visibility="gone"
+            ></TextView>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

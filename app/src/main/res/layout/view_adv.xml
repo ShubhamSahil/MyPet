@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/dp10"
+        app:cardElevation="@dimen/dp4"
+        app:cardCornerRadius="@dimen/dp4"
+        app:cardBackgroundColor="@color/white">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Second View"
+            android:src="@drawable/app_icon"
+            android:scaleType="centerCrop"
+            android:id="@+id/textView" />
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

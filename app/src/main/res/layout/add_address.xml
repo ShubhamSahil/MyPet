@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_bg"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/image_backarrow"
+                android:layout_width="@dimen/dp24"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp24"
+                android:onClick="imagearrow"
+                android:visibility="visible"
+                android:src="@drawable/ic_arrow_left"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_detail"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Add Address"
+                android:textSize="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/image_backarrow"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fab_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_menu_edit"
+                android:visibility="gone"
+                android:padding="@dimen/dp10"
+                android:background="@color/colorPrimaryDark"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="@dimen/dp20"
+        android:layout_margin="@dimen/dp10"
+        tools:context=".MapsActivity" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp20">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/top_layer">
+
+
+
+
+
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="House No./Flat/Building :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_phname"
+            android:fontFamily="@font/tajawal_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Colony/Street/Locality :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_pcname"
+            android:fontFamily="@font/tajawal_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Landmark :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_landmark"
+            android:fontFamily="@font/tajawal_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="State / City :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter State infromation">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/ed_state"
+            android:fontFamily="@font/tajawal_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:id="@+id/emaillinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email :"
+                android:textSize="@dimen/dp16"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:maxLength="10"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/tajawal_bold"
+                ></TextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email (@)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edmemail"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+<LinearLayout
+    android:id="@+id/mobilelinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:maxLength="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile number (EX. 054XXXXXXX)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edmobile"
+            android:inputType="number"
+            android:maxLength="10"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Postcode :"
+        android:textSize="@dimen/dp16"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/tajawal_bold"
+        ></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter pincode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edpincode"
+            android:inputType="number"
+            android:maxLength="10"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="gone"
+
+                >
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="@dimen/dp24"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/dp24"
+                    android:visibility="visible"
+                   />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajawal_bold"
+                    android:text="Is this your current location."
+                    android:textSize="@dimen/dp14"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@id/checkbox"
+                    android:gravity="left"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/textColblack"
+                    android:layout_gravity="left"/>
+
+
+            </RelativeLayout>
+
+
+            <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/tajawal_bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/update"
+        ></Button>
+        </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

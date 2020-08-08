@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
+    >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/backgroundgradient"
+            android:visibility="gone"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <ImageView
+                    android:id="@+id/image_backarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_detail"
+                    android:fontFamily="@font/tajawal_bold"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/dp16"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/RelativeLayout1"
+                android:layout_above="@+id/recycler_view"
+
+
+                >
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/kk_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        />
+
+
+                <ImageView
+                    android:id="@+id/image_taxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/bannertaxi"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:padding="@dimen/dp20"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dp10"
+        >
+
+        <ImageView
+            android:id="@+id/image_mail"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:padding="@dimen/dp10"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/mail"
+            />
+
+
+        <ImageView
+            android:id="@+id/image_chat"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:padding="@dimen/dp10"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/chat"
+            android:background="@null"
+            />
+
+    </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
